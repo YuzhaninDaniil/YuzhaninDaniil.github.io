@@ -1,0 +1,36 @@
+.reserve {
+    display: grid;
+    grid-template-columns: 405px 1fr;
+    gap: 65px 11%;
+    width: 100%;
+    grid-template-areas: 
+    "checkbox scheme"
+    "order legend";
+
+    &__checkbox {
+    grid-area: "checkbox";
+    background-color: #ce2929;
+    }
+
+    &__scheme {
+    grid-area: "scheme";
+    background-color: #ce29b8;
+    }
+
+    &__order {
+    grid-area: "order";
+    background-color: #29ce68;
+    }
+
+    &__legend {
+    grid-area: "legend";
+    background-color: #2942ce;
+    }
+
+    // & > div {
+    // box-sizing: border-box;
+    // padding: 10px;
+    // background-color: coral;
+    // text-align: center;
+    // }
+}
