@@ -1,28 +1,27 @@
-.btn { 
-    display: inline-flex;
+.btn {
+    display: inline-block;
     box-sizing: border-box;
     padding: 15px 40px;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid @black;
     background-color: transparent;
-    text-decoration: none;
-    border: 1px solid;
-    border-radius: 0;
-    outline: none;
+    color: @black;
+    font-family: "Open Sans",sans-serif;
     font-weight: 600;
     font-size: 16px;
-    line-height: 1.3;
-    color: #1f1e1e;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
     transition: background-color 0.2s, color 0.2s;
-    
-    &--red {
-        background-color: #bc3324;
-        border-color:#bc3324;
-        color: #FFFFFF;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    &:hover,
+    &:active {
+        background-color: @black;
+        color: @white;
     }
-    
-    &:hover, .btn:active {
-        background-color: #1f1e1e;
-        color: #FFFFFF;
-      }
 }
