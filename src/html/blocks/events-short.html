@@ -1,11 +1,15 @@
+<!-- <svg class="page-header__logo-icon" width="1920" height="1236">
+    <use xlink:href="assets/icons/symbols.svg#background"></use>
+</svg> -->
 <div class="events-short">
     <div class="events-short__container">
         <h2 class="header header__h2 events-short__header">МЕРОПРИЯТИЯ</h2>
         <div class="listing__events-list">
+            <!-- prettier-ignore -->
             @@loop('event-card.html', [
                 {
                 "class": "listing__event-card",
-                "img": "assets/images/events/nirvana.jpeg",
+                "img": "assets/images/events/nirvana.jpg",
                 "alt": "nirvana",
                 "title": "Собираемся и слушаем альбом Nirvana",
                 "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
@@ -14,7 +18,7 @@
                 },
                 {
                 "class": "listing__event-card",
-                "img": "assets/images/events/stuff.jpeg",
+                "img": "assets/images/events/HowStuffWorks.jpg",
                 "alt": "stuff",
                 "title": "Есть тема, нужно обсудить с HowStuffWorks",
                 "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
@@ -23,7 +27,7 @@
                 },
                 {
                 "class": "listing__event-card",
-                "img": "assets/images/events/sade.jpg",
+                "img": "assets/images/events/Sade.jpg",
                 "alt": "sade",
                 "title": "Вечер | The Best of Sades",
                 "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
@@ -51,6 +55,6 @@
                 </svg>
             </a>
         </div>
-        <a href="../events.html" class="events-short__see-all">Смотреть все</a>
+        <a href="#" class="events-short__see-all">Смотреть все</a>
     </div>
 </div>
