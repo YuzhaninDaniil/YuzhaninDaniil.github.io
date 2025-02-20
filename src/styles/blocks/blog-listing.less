@@ -2,10 +2,15 @@
     .container;
     &__header {
         margin-bottom: 150px;
-        margin-top: 200px;
+        @media @bw500 {
+            margin-bottom: 80px;
+        }
     }
     &__article-list {
         margin-bottom: 70px;
+        @media @bw500 {
+            margin-bottom: 60px;
+        }
     }
     &__link {
         text-decoration: none;
@@ -14,6 +19,9 @@
         margin-top: 50px;
         &:hover {
             color: @red;
+        }
+        @media @bw500 {
+            margin-top: 30px;
         }
     }
 }

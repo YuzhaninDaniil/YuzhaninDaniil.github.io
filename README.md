@@ -1,1 +1,0 @@
-# YuzhaninDaniil.github.io

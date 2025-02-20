@@ -4,15 +4,11 @@
 	<body class="body">
 		@@include('blocks/page-header.html')
     	<main class="main">
+        @@include('blocks/event-pp.html')
         <div class="events">
-          <div>Главная  / Мероприятия</div>
           <section class="listing events__listing">
-            <h2 class="header__h2 header">Мероприятия</h2>
+            <h2 class="header header__h2 events__header">Мероприятия</h2>
             <div class="listing__events-list">
-              <!-- "img_tablet": "assets/images/events/theatre_nirvana.jpg",
-                  "img_webp": "assets/images/events/nirvana.webp",
-                  "img_tablet_webp": "assets/images/events/theatre_nirvana.webp", -->
-              <!-- prettier-ignore -->
               @@loop('blocks/event-card.html', [
                 {
                   "class": "listing__event-card",
@@ -78,25 +74,24 @@
               </a>
             </div>
           </section>
-          <h2 class="header__h2 header">дополнительные  услуги</h2>
-          <div class="listing__description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. 
-              Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, 
-              начинается сложная, но интересная работа, результатом которой будет проведение вашего 
-              мероприятия на высшем уровне.</div>
-        
+          <h2 class="header__h2 header events__header">дополнительные  услуги</h2>
         @@include('blocks/table.html', {"class": "events-tariffs-table"})
-        <div class="listing__i-want title__i-want-container">
-          <div class="title title--small">Я хочу:</div>
-          <div class="title__btn-container">
-              <a href="#" class="btn--red btn">Провести мероприятие</a>
-              <div class="title__empty-block"></div>
-              <a href="#" class="btn">Стать арендатором</a>
-          </div>
+        <div class="listing__i-want-container">
+            <div class="listing__text">Я хочу:</div>
+            <div class="listing__btn-container">
+                <button type="button" href="#" class="btn--red listing__btn btn" id="js-eventOpenBtn">Провести мероприятие</button>
+                <div class="listing__empty-block"></div>
+                <a href="#" class="listing__btn btn">Стать арендатором</a>
+            </div>
         </div>
+      </div>
       <div class="listing__bottom">
         <div class="listing__bottom-element">
           <svg class="listing__bottom-element-icon" width="110" height="110">
             <use xlink:href="assets/icons/symbols.svg#information"></use>
+          </svg>
+          <svg class="listing__bottom-element-icon-small" width="65" height="65">
+            <use xlink:href="assets/icons/symbols.svg#information-small"></use>
           </svg>
           <div class="listing__bottom-element-title">Цены</div>
           <div class="listing__bottom-element-desc">
@@ -108,14 +103,22 @@
           <svg class="listing__bottom-element-icon" width="110" height="110">
             <use xlink:href="assets/icons/symbols.svg#contact"></use>
           </svg>
+          <svg class="listing__bottom-element-icon-small" width="65" height="65">
+            <use xlink:href="assets/icons/symbols.svg#contact-small"></use>
+          </svg>
           <div class="listing__bottom-element-title">Контакты</div>
           <div class="listing__bottom-element-desc">
-            Отдел организации мероприятий<br/>+7 499 350 0730<br/>hi@tagree.ru
+            Отдел организации мероприятий<br/>
+            <a href="tel:74993500730" class="listing__bottom-element-desc-link">+7 499 350 0730</a><br/>
+            <a href="mailto:hi@tagree.ru" class="listing__bottom-element-desc-link">hi@tagree.ru</a>
           </div>
         </div>
         <div class="listing__bottom-element">
           <svg class="listing__bottom-element-icon" width="110" height="110">
             <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+          </svg>
+          <svg class="listing__bottom-element-icon-small" width="65" height="65">
+            <use xlink:href="assets/icons/symbols.svg#handshake-small"></use>
           </svg>
           <div class="listing__bottom-element-title">Преимущество</div>
           <div class="listing__bottom-element-desc">
@@ -126,6 +129,15 @@
       </div>
 		  </main>
       @@include('blocks/page-footer.html')
-      <!-- @@include('blocks/event-pp.html') -->
+      <script src="scripts/jquery-3.7.1.min.js"></script>
+      <script src="scripts/jquery.selectric.min.js"></script>
+      <script src="scripts/jquery.mask.min.js"></script>
+      <script src="scripts/jquery.validate.min.js"></script>
+      <script src="scripts/jquery.validate-init.js"></script>
+      <script src="scripts/air-datepicker.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+      <script src="scripts/swiper.min.js"></script>
+      <script src="scripts/main.min.js"></script>
+      
 	</body>
 </html>
