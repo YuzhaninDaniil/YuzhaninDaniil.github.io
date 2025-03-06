@@ -4,14 +4,15 @@
 	<body class="body">
 		@@include('blocks/page-header.html')
     	<main class="main">
+        @@include('blocks/event-pp.html')
         <div class="events">
           <section class="listing events__listing">
-            <h2 class="header header__h2 events-short__header">МЕРОПРИЯТИЯ</h2>
+            <h2 class="header header__h2 events__header">Мероприятия</h2>
             <div class="listing__events-list">
               @@loop('blocks/event-card.html', [
                 {
                   "class": "listing__event-card",
-                  "img": "assets/images/events/nirvana.jpeg",
+                  "img": "assets/images/events/nirvana.jpg",
                   
                   "alt": "nirvana",
                   "title": "Собираемся и слушаем альбом Nirvana",
@@ -21,7 +22,7 @@
                 },
                 {
                   "class": "listing__event-card",
-                  "img": "assets/images/events/stuff.jpeg",
+                  "img": "assets/images/events/HowStuffWorks.jpg",
                   "alt": "stuff",
                   "title": "Есть тема, нужно обсудить с HowStuffWorks",
                   "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
@@ -30,7 +31,7 @@
                 },
                 {
                   "class": "listing__event-card",
-                  "img": "assets/images/events/sade.jpg",
+                  "img": "assets/images/events/Sade.jpg",
                   "alt": "sade",
                   "title": "Вечер | The Best of Sades",
                   "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
@@ -39,7 +40,7 @@
                 },
                 {
                   "class": "listing__event-card",
-                  "img": "assets/images/events/malevich.jpg",
+                  "img": "assets/images/events/выставка Малевича.jpg",
                   "alt": "malevich",
                   "title": "Выставка Малевича в Томске",
                   "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
@@ -48,7 +49,7 @@
                 },
                 {
                   "class": "listing__event-card",
-                  "img": "assets/images/events/photoshoot.jpg",
+                  "img": "assets/images/events/арт-съемка для Tatler.jpg",
                   "alt": "tatler",
                   "title": "Мастер — класс по студийной съемке от Tatler",
                   "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
@@ -57,7 +58,7 @@
                 },
                 {
                   "class": "listing__event-card",
-                  "img": "assets/images/events/thehatters.jpg",
+                  "img": "assets/images/events/the hatters.jpg",
                   "alt": "hatters",
                   "title": "Повесилимся на славу на концерте The Hatters",
                   "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
@@ -65,12 +66,83 @@
                   "datetime": "2022-12-27T10:00"
                 }
               ])
+              <a class="listing__events-link">
+                <div class="listing__events-link-text">Показать еще</div>
+                <svg class="listing__events-link-arrow" width="60" height="90">
+                  <use xlink:href="assets/icons/symbols.svg#arrow-90"></use>
+                </svg>
+              </a>
             </div>
           </section>
-        </div>
+          <h2 class="header__h3 header events__header">дополнительные  услуги</h2>
+          <div class="listing__description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. 
+              Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, 
+              начинается сложная, но интересная работа, результатом которой будет проведение вашего 
+              мероприятия на высшем уровне.</div>
+        
         @@include('blocks/table.html', {"class": "events-tariffs-table"})
+        <div class="listing__i-want-container">
+            <div class="listing__text">Я хочу:</div>
+            <div class="listing__btn-container">
+                <button type="button" href="#" class="btn--red listing__btn btn" id="js-eventOpenBtn">Провести мероприятие</button>
+                <div class="listing__empty-block"></div>
+                <a href="#" class="listing__btn btn">Стать арендатором</a>
+            </div>
+        </div>
+      </div>
+      <div class="listing__bottom">
+        <div class="listing__bottom-element">
+          <svg class="listing__bottom-element-icon" width="110" height="110">
+            <use xlink:href="assets/icons/symbols.svg#information"></use>
+          </svg>
+          <svg class="listing__bottom-element-icon-small" width="65" height="65">
+            <use xlink:href="assets/icons/symbols.svg#information-small"></use>
+          </svg>
+          <div class="listing__bottom-element-title">Цены</div>
+          <div class="listing__bottom-element-desc">
+            Цены, указанные на сайте носят информационный характер. 
+            Мы придерживаемся индивидуального подхода в работе с клиентом.
+          </div>
+        </div>
+        <div class="listing__bottom-element">
+          <svg class="listing__bottom-element-icon" width="110" height="110">
+            <use xlink:href="assets/icons/symbols.svg#contact"></use>
+          </svg>
+          <svg class="listing__bottom-element-icon-small" width="65" height="65">
+            <use xlink:href="assets/icons/symbols.svg#contact-small"></use>
+          </svg>
+          <div class="listing__bottom-element-title">Контакты</div>
+          <div class="listing__bottom-element-desc">
+            Отдел организации мероприятий<br/>
+            <a href="tel:74993500730" class="listing__bottom-element-desc-link">+7 499 350 0730</a><br/>
+            <a href="mailto:hi@tagree.ru" class="listing__bottom-element-desc-link">hi@tagree.ru</a>
+          </div>
+        </div>
+        <div class="listing__bottom-element">
+          <svg class="listing__bottom-element-icon" width="110" height="110">
+            <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+          </svg>
+          <svg class="listing__bottom-element-icon-small" width="65" height="65">
+            <use xlink:href="assets/icons/symbols.svg#handshake-small"></use>
+          </svg>
+          <div class="listing__bottom-element-title">Преимущество</div>
+          <div class="listing__bottom-element-desc">
+            Мы имеем все возможности для того, чтобы помочь как малому 
+            бизнесу и молодым талантам, так и большим корпорациям и холдингам.
+          </div>
+        </div>
+      </div>
 		  </main>
       @@include('blocks/page-footer.html')
-      <!-- @@include('blocks/event-pp.html') -->
+      <script src="scripts/jquery-3.7.1.min.js"></script>
+      <script src="scripts/jquery.selectric.min.js"></script>
+      <script src="scripts/jquery.mask.min.js"></script>
+      <script src="scripts/jquery.validate.min.js"></script>
+      <script src="scripts/jquery.validate-init.js"></script>
+      <script src="scripts/air-datepicker.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+      <script src="scripts/swiper.min.js"></script>
+      <script src="scripts/main.min.js"></script>
+      
 	</body>
 </html>

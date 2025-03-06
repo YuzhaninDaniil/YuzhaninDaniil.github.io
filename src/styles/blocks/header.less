@@ -3,7 +3,8 @@
     box-sizing: border-box;
     justify-content: center;
 
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: @black;
     text-transform: uppercase;
     font-family: @font2;
@@ -14,14 +15,45 @@
         font-size: 36px;
         font-weight: 500;
         padding: 8px;
+        @media @bw1340 {
+            width: 604px;
+        }
+        @media @bw768 {
+            width: 566px;
+            height: 52px;
+            font-size: 24px;
+            padding: 11px;
+        }
+        @media @bw500 {
+            width: 280px;
+            height: 42px;
+            font-size: 16px;
+        }
     }
-    &__h4 {
-        width: 162px;
-        height: 34px;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 6px;
-        font-family: @font1;
-        margin-bottom: 40px;
+    &__h3 {
+        align-items: center; /*if it works it works*/
+        justify-content: center;
+        width: 624px;
+        height: 62px;
+        font-size: 22px;
+        font-weight: 400;
+        padding: 8px;
+        
+        @media @bw1340 {
+            width: 604px;
+        }
+        
+        @media @bw768 {
+            width: 566px;
+            height: 52px;
+            font-size: 20px;
+            padding: 11px;
+        }
+        
+        @media @bw500 {
+            width: 280px;
+            height: 42px;
+            font-size: 16px;
+        }
     }
 }

@@ -8,47 +8,63 @@
             <a href="#" class="page-footer__block1-link">Наши проекты</a>
             <a href="#" class="page-footer__block1-link">Контакты</a>
         </div>
-        <form class="page-footer__subscribe-form subscribe-form">
+        <form 
+            action="https://jsonplaceholder.typicode.com/posts"
+            class="page-footer__subscribe-form subscribe-form" 
+            id="js-subscribeForm"
+        >
             <h4 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h4>
             <div class="subscribe-form__wrapper">
-                <div class="subscribe-form__field-wrapper">
-                    <input name="email" type="email" placeholder="Email" class="subscribe-form-input field__input" required />
-                    <button type="submit" class="subscribe-form__submit ">Подписаться</button>
+                <div class="subscribe-form__field-and-error-wrapper">
+                    <div class="subscribe-form__field-wrapper">
+                        <input name="email" type="email" placeholder="Email" class="field__input subscribe-form__input"
+                            required />
+                    </div>
+                    <button type="submit" class="subscribe-form__submit">Подписаться</button>
                 </div>
-                <label class="subscribe-form__check check">
-                    <input name="agree" type="checkbox" class="check__input" required checked/>
-                    <span class="check__mark"></span> 
-                    <span class="check__label">Согласен на обработку персональных данных</span>
+
+                <label class="check subscribe-form__check">
+                    <div class="subscribe-form__error-wrapper">
+                        <input name="agree" type="checkbox" class="check__input" required checked />
+                        <span class="check__mark"></span>
+                        <span class="check__label subscribe-form__check-label">Согласен на обработку персональных данных</span>
+                    </div>
                 </label>
+
             </div>
         </form>
     </div>
     <div class="page-footer__block2">
         <div class="page-footer__socials socials">
-            <a href="#" class="page-footer__social socials">
-                <svg class="page-footer__logo-icon" width="58" height="58">
+            <a href="#" class="page-footer__social socials__link">
+                <svg class="socials__icon" width="58" height="58">
                     <use xlink:href="assets/icons/symbols.svg#insta"></use>
                 </svg>
+                <svg class="socials__icon-small" width="48" height="48">
+                    <use xlink:href="assets/icons/symbols.svg#insta-small"></use>
+                </svg>
             </a>
-            <a href="#" class="page-footer__social socials">
-                <svg class="page-footer__logo-icon" width="58" height="58">
+            <a href="#" class="page-footer__social socials__link">
+                <svg class="socials__icon" width="58" height="58">
                     <use xlink:href="assets/icons/symbols.svg#vk"></use>
                 </svg>
-            </a> 
+                <svg class="socials__icon-small" width="48" height="48">
+                    <use xlink:href="assets/icons/symbols.svg#vk-small"></use>
+                </svg>
+            </a>
         </div>
         <div class="page-footer__block2-links">
-            <div class="page-footer__copyright">© Millennials 2022</div>
-            <a href="#" class="page-footer__block2-links">Политика конфиденциальности</a>
-            <a href="#" class="page-footer__block2-links">Cookies</a>
+            <a href="#" class="page-footer__block2-link">Политика конфиденциальности</a>
+            <a href="#" class="page-footer__block2-link">Cookies</a>
         </div>
-
-        <div class="page-footer__block2-credits">
-            <div class="page-footer__credits">
-                Создание и продвижение
-                <svg class="page-footer__logo-icon" width="56" height="17">
+        <div class="page-footer__copyright">© Millennials 2022</div>
+        <div class="page-footer__create">
+            Создание и продвижение
+            <a class="page-footer__create-link">
+                <svg class="page-footer__create-icon" width="56" height="17">
                     <use xlink:href="assets/icons/symbols.svg#tagree"></use>
                 </svg>
-            </div>
+            </a>
         </div>
     </div>
 </footer>

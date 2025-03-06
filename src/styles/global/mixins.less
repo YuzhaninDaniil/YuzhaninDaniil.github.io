@@ -28,14 +28,7 @@
     visibility: hidden !important;
     pointer-events: none !important;
 }
-.show-event-popup {
-    body {
-      overflow: hidden;
-    }
-    #eventPP {
-      display: flex;
-    }
-  }
+
 
   .width_624 {
     box-sizing: border-box;
@@ -46,5 +39,39 @@
     }
     @media @bw1340 {
       max-width: 504px;
+    }
+  }
+
+  .show-nav {
+    body {
+      @media @bw1020 {
+        overflow: hidden;
+      }
+    }
+    .page-header__nav {
+      @media @bw1020 {
+        transform: translateX(0);
+      }
+    }
+    .page-header__nav-toggle {
+      &::before {
+        transform: translate(0px, 6px) rotate(45deg);
+        box-shadow: none;
+      }
+      &::after {
+        transform: translate(0px, -6px) rotate(-45deg);
+      }
+    }
+    .page-header__nav-toggle-line {
+      opacity: 0;
+    }
+  }
+
+  .show-event-popup {
+    body {
+      overflow: hidden;
+    }
+    #js-eventPP {
+      display: flex;
     }
   }
